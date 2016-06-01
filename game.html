@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="riddle.html">Загадки</a></li>
+			<li><a href="game.html">Угадайка</a></li>
+			<li><a href="multiplayer.html">Угадайка + мультиплеер</a></li>			
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Угадайка</h2>
+	</div>
+	<div id="content">
+
+	<h3>Отгадай число!</h3>  
+
+	<p>Добро пожаловать в игру "Угадай число"! Вам предстоит угадать загаданное число. Количество попыток неограниченно. Желаю удачи! =)<p/>
+	</br>
+
+	<p>Введите загаданное число, от 1 до 100.</p>
+	</br></br>
+
+	<input type="button" value="Начать игру" onClick="
+    var nomber = parseInt(Math.random() * 100 + 1);
+    var i = 0;
+    while(i < 1){
+        var answer = prompt();
+        if(answer == 'q'){
+            i++;
+        } else if(answer == nomber){
+            alert('Поздравляем, вы угадали!');
+            i++;
+        } else if(answer < 1 || answer > 100)
+            alert('Ошибка! Введено некорректное число.');
+        else 
+            alert('Вы не отгадали');
+        }
+	" />
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>

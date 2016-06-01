@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	
+	function checkAnswers(tagName, answer){
+		
+		userAnswer = document.getElementById(tagName).value;
+		if(userAnswer.toLowerCase() == answer)
+			return true;
+		else
+			return false;
+	}
+
+	function cheackAnswers(){
+
+		var goodAnswer = 0;
+		if(checkAnswers('riddleone', 'программист'))
+			goodAnswer++;
+		if(checkAnswers('riddletwo', 'буква р'))
+			goodAnswer++;
+        if(checkAnswers('riddlethree', 'владивосток'))
+			goodAnswer++;
+
+		if(goodAnswer == 0)
+			alert('Вы ничего не угадали');
+		else
+			alert('Количество правильных ответов: ' + goodAnswer);		
+	}
+
+</script>
+</head>
+
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="riddle.html">Загадки</a></li>
+			<li><a href="game.html">Угадайка</a></li>
+			<li><a href="multiplayer.html">Угадайка + мультиплеер</a></li>			
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра в загадки</h2>
+	</div>
+	<div id="content">
+
+	<h3>Отгадай загадки!</h3>  
+
+
+	<p>Он программы пишет-пишет, За компьютером сидит,Все эмоции здесь лишни – Лишь исходный код твердит. Кто это?<p/>
+	<input type="text" id="riddleone" />
+	</br></br>
+
+	<p>Что в России на первом месте, а во Франции на втором?<p/>
+	<input type="text" id="riddletwo" />
+	</br></br>
+
+	<p>В каком городе спрятались мужское имя и сторона света?<p/>
+	<input type="text" id="riddlethree" />
+	</br></br>
+
+	<input type="button" value="Ответить" onClick="cheackAnswers()" />
+
+		
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
